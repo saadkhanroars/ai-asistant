@@ -1,7 +1,7 @@
 {
-  "name": "desktop-ai-assistant",
+  "name": "desktop-ai-assistant-frontend",
   "version": "1.0.0",
-  "description": "Modern Desktop AI Assistant with beautiful UI",
+  "description": "Modern React + Electron frontend for Desktop AI Assistant",
   "main": "public/electron.js",
   "homepage": "./",
   "author": "AI Assistant Team",
@@ -61,7 +61,8 @@
     "files": [
       "build/**/*",
       "node_modules/**/*",
-      "public/electron.js"
+      "public/electron.js",
+      "public/preload.js"
     ],
     "directories": {
       "buildResources": "public"
@@ -76,7 +77,9 @@
     },
     "nsis": {
       "oneClick": false,
-      "allowToChangeInstallationDirectory": true
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
     }
   }
 }

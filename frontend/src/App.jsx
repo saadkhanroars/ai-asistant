@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useStore } from './store/appStore';
 import { ChatInterface } from './components/ChatInterface';
 import { SearchInterface } from './components/SearchInterface';
+import { SettingsInterface } from './components/SettingsInterface';
 import { Sidebar } from './components/Sidebar';
 import { TopBar } from './components/TopBar';
 import { useApi } from './hooks/useApi';
@@ -38,6 +39,7 @@ export default function App() {
         <div className="flex-1 overflow-hidden">
           {activeTab === 'chat' && <ChatInterface />}
           {activeTab === 'search' && <SearchInterface />}
+          {activeTab === 'settings' && <SettingsInterface />}
         </div>
       </div>
     </div>
